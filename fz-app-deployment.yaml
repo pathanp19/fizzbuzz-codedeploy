@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fz-app
+spec:
+  selector:
+    matchLabels:
+      app: fz-app
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: fz-app
+    spec:
+      containers:
+      - name: fz-app 
+        image: "pathanp19/fizzbuzzcode:v03"
